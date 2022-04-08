@@ -39,7 +39,7 @@ export const getServerSideProps = async (context) => {
 
     query: gql` 
     query{
-      trainers{
+      trainers (pagination:{limit:1000}){
         data{
           id
           attributes{

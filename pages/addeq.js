@@ -59,7 +59,7 @@ const addeq = ({ token }) => {
 
             formData.append('data', JSON.stringify(eqdata));
 
-            request.open('POST', 'http://localhost:1337/api/equipments/');
+            request.open('POST', 'https://sstback.herokuapp.com/api/equipments');
 
             request.send(formData);
         });

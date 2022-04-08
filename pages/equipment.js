@@ -6,27 +6,27 @@ import Eqcard from "../components/cards/eqcard";
 
 
 
-const equipment = ({ equipmentdata }) => {
-    return (
+export default function equipment({ equipmentdata })  {
+  return (
 
 
-        <div class="flex flex-wrap items-center justify-center">
-            {equipmentdata.map((d) => (
-                <Eqcard
-                    equipmentName={d.attributes.equipmentName}
-                    price={d.attributes.price}
-                    description={d.attributes.description}
-                    contactnumber={d.attributes.contactNumber}
-                    url={d.attributes.Image.data.attributes.formats.thumbnail.url}
+      <div class="flex flex-wrap items-center justify-center">
+          {equipmentdata.map((d) => (
+              <Eqcard
+                  equipmentName={d.attributes.equipmentName}
+                  price={d.attributes.price}
+                  description={d.attributes.description}
+                  contactnumber={d.attributes.contactNumber}
+                  //url={d.attributes.Image.data.attributes.formats.thumbnail.url}
 
-                />
-            ))}
-        </div>
+              />
+          ))}
+      </div>
 
-    )
+  )
 }
 
-export default equipment
+
 export const getServerSideProps = async (context) => {
 
     const client = createGQLClient();
@@ -36,7 +36,7 @@ export const getServerSideProps = async (context) => {
         query: gql` 
         query
         {
-        equipments
+        equipments (pagination:{limit:1000})
           {
             data
         

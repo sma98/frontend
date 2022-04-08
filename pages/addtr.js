@@ -86,7 +86,7 @@ const addtr = ({ token }) => {
 
 			formData.append('data', JSON.stringify(trainerdata));
 
-			request.open('POST', 'http://localhost:1337/api/trainers/');
+			request.open('POST', 'https://sstback.herokuapp.com/api/trainers');
 
 			request.send(formData);
 		});

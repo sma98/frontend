@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
+    "@emailjs/browser": "^3.5.0",
     "@paypal/react-paypal-js": "4.1.0",
     "autoprefixer": "^10.4.4",
     "axios": "^0.26.1",

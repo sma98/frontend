@@ -11,16 +11,17 @@ const TopNav = () => {
         <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
          <Link href='/showtr'>Show trainers</Link> 
           </li>
+          <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
+          <Link href ='/equipment'>
+          Equipments </Link></li>
+        
         <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
         <Link href='/addtr'>Add trainers</Link>
         </li>
         <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
         <Link href='/addeq'>Add equipments</Link>
         </li>
-        <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
-          <Link href ='/equipment'>
-          Equipment </Link></li>
-        <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">Login</li>
+       
         <li class="text-md text-white tracking-wide cursor-pointer hover:border-white hover:border-b-2 border-b-2 border-transparent transition duration-300">
           <Link href='/about'>About</Link>
         </li>

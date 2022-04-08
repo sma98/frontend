@@ -12,33 +12,42 @@ const Eqcard = ({ equipmentName, contactnumber, price, description, url }) => {
 
     return (
 
-        <div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer">
 
 
+        <div class="max-w-xs rounded-md overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer ">
+            <div class>
 
-            <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg p-8" src={`http://localhost:1337${url}`} alt="product image"></img>
-                </a>
-                <div class="px-5 pb-5">
-                    <a href="#">
-                        <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">{equipmentName}</h3>
-                    </a>
-                    <div class="flex items-center mt-2.5 mb-5">
+                <img class="rounded-t-lg p-8" src={`https://sstback.herokuapp.com${url}`} alt={`${url}`} />
 
-
-                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
-                    </div>
-                    <div class="flex items-center justify-between">
-                        <span class="text-3xl font-bold text-gray-900 dark:text-white">RS.{price}</span>
-                        <a href="#"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            buy</a>
-                        <button type="submit" onClick={() => pay()} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-                    </div>
+            </div>
+            <div class="p-2">
+                <h3 class="text-center text-xl text-gray-900 font-medium leading-8">{equipmentName}</h3>
+                <div class="text-center text-gray-400 text-xs font-semibold">
+                    <p>{description}</p>
                 </div>
+                <table class="text-xs my-3">
+                    <tbody>
+                        <tr>
+                            <td class="px-2 py-2 text-gray-500 font-semibold">Phone</td>
+                            <td class="px-2 py-2">{contactnumber}</td>
+                        </tr>
+                        <tr>
+                            <td class="px-2 py-2 text-gray-500 font-semibold">Price</td>
+                            <td class="px-2 py-2">{price}</td>
+                        </tr>
+
+                      
+                        
+                    </tbody></table>
+
+                <div class="text-center my-3">
+                    <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" ></a>
+               
+                </div>
+
             </div>
         </div>
+
 
     )
 
